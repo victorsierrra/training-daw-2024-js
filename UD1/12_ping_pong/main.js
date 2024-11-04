@@ -1,5 +1,17 @@
 function pingPong() {
-
+    for (let i = 0; i < 100; i++) {
+        if (i % 5 === 0 && i > 0) {
+            if (i % 10 === 0) {
+                console.log(`${i} Pong`)
+            }
+            else {
+                console.log(`${i} Ping`)
+            }
+        }
+        else {
+            if (i > 0) { console.log(i) }
+        }
+    }
 }
 
 pingPong()

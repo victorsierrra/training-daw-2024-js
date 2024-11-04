@@ -1,6 +1,8 @@
 const assert = require('assert').strict;
 
 function toHoursMinutesSeconds(value) {
+    let minutos = value / 60
+    let horas = minutos / 60
 }
 
 assert.deepStrictEqual(toHoursMinutesSeconds(3600), "1:0:0")

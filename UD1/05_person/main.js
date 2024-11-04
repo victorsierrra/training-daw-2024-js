@@ -3,7 +3,16 @@
 
 const assert = require('assert').strict;
 
-function createPerson(name, lastname, years, gender, address) {
+function createPerson(nombre, apellido, años, genero, direccion) {
+    var person = 
+        {
+            name: nombre,
+            lastname: apellido,
+            years: años,
+            gender: genero,
+            address: direccion
+        }
+    return person
 }
 
 let person = createPerson('John', 'Foo', 35, 'male', 'fake stree 123')
