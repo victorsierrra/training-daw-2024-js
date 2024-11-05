@@ -8,17 +8,27 @@ window.onload = function() {
     document.getElementById('pregunta_no').onchange = changeValue
     let condiciones = document.getElementById('condiciones')
     let privacidad = document.getElementById('privacidad')
-    let boton = document.getElementById('enviar')
-    if (condiciones.checked == true && privacidad.checked == true )
-    {
-        boton.disabled = true
-    }
-    else {
-        boton.disabled = false
-    }
+    let boton = document.getElementById('submit')
+    boton.disabled = true;
+
+
+    condiciones.onchange = function() {
+        checkConditionsAndPrivacy(condiciones, privacidad, boton);
+    };
+    privacidad.onchange = function() {
+        checkConditionsAndPrivacy(condiciones, privacidad, boton);
+    };
     
 }
 
 function changeValue(e) {
      console.log('changed' + e.target.value)
+}
+
+function checkConditionsAndPrivacy(condiciones, privacidad, boton) {
+    if (condiciones.checked && privacidad.checked) {
+        boton.disabled = false;
+    } else {
+        boton.disabled = true;
+    }
 }
