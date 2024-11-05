@@ -1,5 +1,11 @@
 function printMultiplicationTables() {
-
+    for (let i = 1; i <= 10; i++) {
+        let fila = i + '\t';  
+        for (let j = 1; j <= 10; j++) {
+            fila +=  '\t' +(i * j) ;
+        }
+        console.log(fila);
+    }
 }
 
 printMultiplicationTables()
@@ -15,3 +21,4 @@ printMultiplicationTables()
 // 8   8   16  24  ...
 // 9   9   18  27  ...
 // 10  10  20  30  ...
+
